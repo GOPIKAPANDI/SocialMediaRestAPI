@@ -14,9 +14,9 @@ export const registerUser = async(req,res) => {
     const {username} = req.body;
     
     try { 
-        const oldUser = await UserModel.findOne({username}); 
+        const oldUser = await UserModel.findOne({username});  
         if(oldUser){
-            return res.status(400).json({message : "Username is already registered!"});
+            return res.status(400).json({message : "Username is already registered!"}); 
         }
         const user = await newUser.save()  
 
