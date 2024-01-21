@@ -17,7 +17,7 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 
 const corsOptions = {
-    origin: 'https://socialmediafrontend.onrender.com', 
+    origin: 'https://socialmediafrontend2.onrender.com', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
