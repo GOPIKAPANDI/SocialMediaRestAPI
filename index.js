@@ -12,12 +12,12 @@ import UploadRoute from './Routes/UploadRoute.js';
 // Routes 
 const app = express();
 
-// MiddleWare 
+// MiddleWare  
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 
 const corsOptions = {
-    origin: 'https://socialmediafrontend3.onrender.com', 
+    origin: 'https://socialmediafrontend4.onrender.com', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
