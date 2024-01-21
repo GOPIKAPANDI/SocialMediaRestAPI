@@ -15,7 +15,17 @@ const app = express();
 // MiddleWare 
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
-app.use(cors())
+
+const corsOptions = {
+    origin: 'https://socialmediafrontend.onrender.com', 
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  };
+  
+  app.use(cors(corsOptions));
+  
+  
 // to server images for public 
 app.use(express.static('public'));
 app.use('/images', express.static('images'));
